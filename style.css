@@ -1,0 +1,16 @@
+@keyframes fadeout {
+    0% {
+        opacity: 100;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+.fadeout {
+    animation : fadeout 3s;
+}
+
+.invisible {
+    display:none;
+}
