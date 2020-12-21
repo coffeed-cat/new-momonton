@@ -4,6 +4,38 @@ const form = document.querySelector(".js-nameForm");//폼 선택
 const input = form.querySelector("input");//input 선택
 const greeting = document.querySelector(".js-greeting");
 const hajimemashite = document.querySelector(".js-hajimemashite");
+const clockBoxForGreetingJs = document.querySelector(".js-clockBox");
+
+function seeClock(){
+    clockBoxForGreetingJs.classList.remove("invisible");
+}
+
+function seeGreeting(){
+    //paintGreeting 되고나서 greeting이 보이도록 invisible 클래스를 지움
+    greeting.classList.remove("invisible");
+}
+
+function seeAfterSubmit(){
+    hajimemashite.addEventListener("animationend",function(){
+        seeClock();
+        seeGreeting();
+    });
+}
+
+function successLoad(){
+    removeForm();
+    removeHajimemashite();
+    seeClock();
+    seeGreeting();  
+}
+
+function removeForm(){
+    form.classList.remove("showing");
+}
+
+function removeHajimemashite(){
+    hajimemashite.classList.remove("showing");
+}
 
 function removeFormAni(){
     form.classList.add("fadeout");
@@ -21,18 +53,19 @@ function removeHajimemashiteAni(){
     });
 }
 
-function seeGreeting(){
-    //paintGreeting 되고나서 greeting이 보이도록 invisible 클래스를 지움
-    greeting.classList.remove("invisible");
+
+function saveName(userName){
+    localStorage.setItem(USER_NAME,userName);
 }
 
 function handleSubmit(event){
     event.preventDefault();
     const currentValue = input.value;
-    localStorage.setItem(USER_NAME,currentValue);
+    saveName(currentValue);
     input.value = '';
     removeHajimemashiteAni();
     removeFormAni();
+    seeAfterSubmit();
     paintGreeting(currentValue);
 }
 
@@ -42,7 +75,7 @@ function askForName(){
 
 function paintGreeting(userName){
     greeting.innerText = `Good Day. ${userName}`;
-    seeGreeting();
+    //seeGreeting();
 }
 
 
@@ -51,6 +84,7 @@ function loadName(){
     if(userName === null){
         askForName();
     }else{
+        successLoad();
         paintGreeting(userName);
     }
 }
