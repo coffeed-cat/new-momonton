@@ -9,7 +9,7 @@ function removeFormAni(){
     form.classList.add("fadeout");
     form.addEventListener("animationend",function(){
         form.classList.remove("fadeout");
-        form.classList.add("invisble");
+        form.classList.remove("showing");
     });
 }
 
@@ -17,7 +17,7 @@ function removeHajimemashiteAni(){
     hajimemashite.classList.add("fadeout");
     hajimemashite.addEventListener("animationend",function(){
         hajimemashite.classList.remove("fadeout");
-        hajimemashite.classList.add("invisible");
+        hajimemashite.classList.remove("showing");
     });
 }
 
