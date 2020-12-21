@@ -6,6 +6,19 @@ const greeting = document.querySelector(".js-greeting");
 const hajimemashite = document.querySelector(".js-hajimemashite");
 const clockBoxForGreetingJs = document.querySelector(".js-clockBox");
 const clockForGreetingJs = clockBoxForGreetingJs.querySelector(".js-clock");
+const rinziBox = document.querySelector(".js-rinziBox");
+
+function rename(){
+    form.classList.add("showing");
+}
+
+function genBtn(){
+    const renameBtn = document.createElement("btn");
+    renameBtn.innerText = "X";
+    renameBtn.addEventListener("click",rename);
+    renameBtn.classList.add("fadein");
+    rinziBox.appendChild(renameBtn);
+}
 
 function seeClockBox(){
     clockBoxForGreetingJs.classList.remove("invisible");
@@ -27,7 +40,8 @@ function successLoad(){
     removeForm();
     removeHajimemashite();
     seeClockBox();
-    seeGreeting();  
+    seeGreeting();
+    genBtn();  
 }
 
 function removeForm(){
