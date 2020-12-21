@@ -5,8 +5,9 @@ const input = form.querySelector("input");//input 선택
 const greeting = document.querySelector(".js-greeting");
 const hajimemashite = document.querySelector(".js-hajimemashite");
 const clockBoxForGreetingJs = document.querySelector(".js-clockBox");
+const clockForGreetingJs = clockBoxForGreetingJs.querySelector(".js-clock");
 
-function seeClock(){
+function seeClockBox(){
     clockBoxForGreetingJs.classList.remove("invisible");
 }
 
@@ -17,7 +18,7 @@ function seeGreeting(){
 
 function seeAfterSubmit(){
     hajimemashite.addEventListener("animationend",function(){
-        seeClock();
+        seeClockBox();
         seeGreeting();
     });
 }
@@ -25,7 +26,7 @@ function seeAfterSubmit(){
 function successLoad(){
     removeForm();
     removeHajimemashite();
-    seeClock();
+    seeClockBox();
     seeGreeting();  
 }
 
@@ -74,8 +75,14 @@ function askForName(){
 }
 
 function paintGreeting(userName){
-    greeting.innerText = `Good Day. ${userName}`;
-    //seeGreeting();
+    const hourForGreet = new Date().getHours();
+    if(hourForGreet > 6 && hourForGreet < 12){
+        greeting.innerText = `Good Moring. ${userName}!`;
+    }else if(hourForGreet >= 12 && hourForGreet < 18){
+        greeting.innerText = `Good Afternoon. ${userName}!`;
+    }else{
+        greeting.innerText = `You must be exhausted. ${userName}`;
+    }
 }
 
 
