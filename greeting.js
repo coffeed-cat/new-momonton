@@ -6,6 +6,11 @@ const greeting = document.querySelector(".js-greeting");
 const hajimemashite = document.querySelector(".js-hajimemashite");
 const clockBoxForGreetingJs = document.querySelector(".js-clockBox");
 const clockForGreetingJs = clockBoxForGreetingJs.querySelector(".js-clock");//삭제해도될듯
+const toDoBox = document.querySelector(".js-toDoBox");
+
+function seeToDoBox(){
+    toDoBox.classList.remove("invisible");
+}
 
 function seeClockBox(){
     clockBoxForGreetingJs.classList.remove("invisible");
@@ -20,6 +25,7 @@ function seeAfterSubmit(){
     hajimemashite.addEventListener("animationend",function(){
         seeClockBox();
         seeGreeting();
+        seeToDoBox();
         genRenameForm();
         genBtn();
     });
@@ -30,6 +36,7 @@ function successLoad(){
     removeHajimemashite();
     seeClockBox();
     seeGreeting();
+    seeToDoBox();
     genRenameForm();//identified in rename.js
     genBtn();//identified in rename.js
 }
