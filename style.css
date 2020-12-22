@@ -48,6 +48,10 @@
     display:inline;
 }
 
+.toDoList {
+    overflow-y: auto;
+    height:200px;
+}
 .bgImage {
     position: absolute;
     top:0;
