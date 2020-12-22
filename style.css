@@ -1,5 +1,9 @@
-.nameForm, .hajimemashite{
+.nameForm, .hajimemashite, .renameBtn{
     display:none;
+}
+
+.renameForm {
+    display:inline;
 }
 
 @keyframes fadein {
@@ -34,4 +38,8 @@
 
 .showing {
     display:block;
+}
+
+.showingAsInline {
+    display:inline;
 }

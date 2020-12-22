@@ -5,20 +5,7 @@ const input = form.querySelector("input");//input 선택
 const greeting = document.querySelector(".js-greeting");
 const hajimemashite = document.querySelector(".js-hajimemashite");
 const clockBoxForGreetingJs = document.querySelector(".js-clockBox");
-const clockForGreetingJs = clockBoxForGreetingJs.querySelector(".js-clock");
-const greetingBox = document.querySelector(".js-greetingBox");
-
-function rename(){
-    form.classList.add("showing");
-}
-
-function genBtn(){
-    const renameBtn = document.createElement("btn");
-    renameBtn.innerText = "✂";
-    renameBtn.addEventListener("click",rename);
-    renameBtn.classList.add("fadein");
-    greetingBox.appendChild(renameBtn);
-}
+const clockForGreetingJs = clockBoxForGreetingJs.querySelector(".js-clock");//삭제해도될듯
 
 function seeClockBox(){
     clockBoxForGreetingJs.classList.remove("invisible");
@@ -33,6 +20,8 @@ function seeAfterSubmit(){
     hajimemashite.addEventListener("animationend",function(){
         seeClockBox();
         seeGreeting();
+        genRenameForm();
+        genBtn();
     });
 }
 
@@ -41,7 +30,8 @@ function successLoad(){
     removeHajimemashite();
     seeClockBox();
     seeGreeting();
-    genBtn();  
+    genRenameForm();//identified in rename.js
+    genBtn();//identified in rename.js
 }
 
 function removeForm(){
@@ -54,6 +44,7 @@ function removeHajimemashite(){
 
 function removeFormAni(){
     form.classList.add("fadeout");
+    form.removeEventListener("submit",handleSubmit);/////
     form.addEventListener("animationend",function(){
         form.classList.remove("fadeout");
         form.classList.remove("showing");
