@@ -6,7 +6,7 @@ const greeting = document.querySelector(".js-greeting");
 const hajimemashite = document.querySelector(".js-hajimemashite");
 const clockBoxForGreetingJs = document.querySelector(".js-clockBox");
 const clockForGreetingJs = clockBoxForGreetingJs.querySelector(".js-clock");
-const rinziBox = document.querySelector(".js-rinziBox");
+const greetingBox = document.querySelector(".js-greetingBox");
 
 function rename(){
     form.classList.add("showing");
@@ -14,10 +14,10 @@ function rename(){
 
 function genBtn(){
     const renameBtn = document.createElement("btn");
-    renameBtn.innerText = "X";
+    renameBtn.innerText = "✂";
     renameBtn.addEventListener("click",rename);
     renameBtn.classList.add("fadein");
-    rinziBox.appendChild(renameBtn);
+    greetingBox.appendChild(renameBtn);
 }
 
 function seeClockBox(){
