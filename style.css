@@ -1,5 +1,12 @@
 * {
     color:white;
+    font-family: "Segoe UI";
+    font-weight: 200;
+}
+
+body {
+    background-color: black;
+    margin:0;
 }
 
 .nameForm, .hajimemashite, .renameBtn{
@@ -62,6 +69,35 @@
     align-items:center;
 }
 
+.hajimemashite {
+    text-align: center;
+    font-size: 50px;
+}
+
+.nameForm {
+    text-align: center;
+}
+
+.nameForm input {
+    text-align: center;
+    font-size: 50px;
+    height: 50px;
+    width: 300px;
+    background: none;
+    border: 0;
+    border-bottom: 3px solid white;
+}
+
+.nameForm input:focus {
+    outline: none;
+}
+
+.clock {
+    margin: 0;
+    font-size: 200px;
+    font-weight: 100;
+}
+
 .toDoList {
     overflow-y: auto;
     height:200px;
@@ -73,4 +109,5 @@
     width:100%;
     height:100%;
     z-index:-1;
+    animation:fadein 700ms;
 }
