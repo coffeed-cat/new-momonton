@@ -8,6 +8,17 @@ const clockBoxForGreetingJs = document.querySelector(".js-clockBox");
 const clockForGreetingJs = clockBoxForGreetingJs.querySelector(".js-clock");//삭제해도될듯
 const toDoBox = document.querySelector(".js-toDoBox");
 
+function addHoverOnRenameBtn(){
+    greetingBox.addEventListener("mouseover",function(){//////
+        const renameBtn = document.querySelector(".js-renameBtn");
+        renameBtn.style.opacity = 100;
+    });
+    greetingBox.addEventListener("mouseout",function(){///////
+        const renameBtn = document.querySelector(".js-renameBtn");
+        renameBtn.style.opacity = 0;
+    });
+}
+
 function seeToDoBox(){
     toDoBox.classList.remove("invisible");
 }
@@ -19,6 +30,7 @@ function seeClockBox(){
 function seeGreeting(){
     //paintGreeting 되고나서 greeting이 보이도록 invisible 클래스를 지움
     greeting.classList.remove("invisible");
+    addHoverOnRenameBtn();
 }
 
 function seeAfterSubmit(){

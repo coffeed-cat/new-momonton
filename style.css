@@ -94,14 +94,25 @@ body {
 
 .clock {
     margin: 0;
-    font-size: 200px;
+    font-size: 160px;
     font-weight: 100;
+}
+
+.greeting {
+    padding-left: 16px;
+    font-size: 46px;
+}
+
+.renameBtn {
+    opacity: 0;
+    transition: all 500ms;
 }
 
 .toDoList {
     overflow-y: auto;
     height:200px;
 }
+
 .bgImage {
     position: absolute;
     top:0;
