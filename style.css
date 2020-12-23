@@ -48,6 +48,20 @@
     display:inline;
 }
 
+.weather {
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+.mainBox {
+    display:flex;
+    height:100vh;
+    flex-flow:wrap column;
+    justify-content: center;
+    align-items:center;
+}
+
 .toDoList {
     overflow-y: auto;
     height:200px;

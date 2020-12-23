@@ -8,39 +8,39 @@
 <body>
     <header>
         <div>
-            <span class="js-weather"></span>
+            <span class="js-weather weather"></span>
         </div>
     </header>
     <main>
-
-        <div class="js-clockBox clockBox fadein invisible">
-            <h1 class="js-clock">00:00</h1>
-        </div>
-
-        <div class="js-wholeGreeting">
-
-            <div class="js-hajimemashite hajimemashite showing">
-                Hi! It's a Good day!<!-- 나타났다가 사라지고 Tell me your name 으로 내용 바꾼후 다시 나타냄-->
+        <div class="mainBox">
+            <div class="js-clockBox clockBox fadein invisible">
+                <h1 class="js-clock">00:00</h1>
             </div>
-            <div class="js-greetingBox"><!--수정바람-->
-                <span class="js-greeting greeting fadein invisible">
-                    <!--시계랑 같이 나타남-->
-                </span>
+
+            <div class="js-wholeGreeting">
+
+                <div class="js-hajimemashite hajimemashite showing">
+                    Hi! It's a Good day!<!-- 나타났다가 사라지고 Tell me your name 으로 내용 바꾼후 다시 나타냄-->
+                </div>
+                <div class="js-greetingBox"><!--수정바람-->
+                    <span class="js-greeting greeting fadein invisible">
+                        <!--시계랑 같이 나타남-->
+                    </span>
+                </div>
+                <form class="js-nameForm nameForm showing">
+                    <input type="text">
+                </form>
+
             </div>
-            <form class="js-nameForm nameForm showing">
-                <input type="text">
-            </form>
+            <div class="js-toDoBox fadein invisible">
+                <form class="js-toDoForm">
+                    <input type="text" placeholder="Write a to do">
+                </form>
+                <ul class="js-toDoList toDoList">
 
+                </ul>
+            </div>
         </div>
-        <div class="js-toDoBox fadein invisible">
-            <form class="js-toDoForm">
-                <input type="text" placeholder="Write a to do">
-            </form>
-            <ul class="js-toDoList toDoList">
-
-            </ul>
-        </div>
-
 
     </main>
     <script src="bg.js"></script>
