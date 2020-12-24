@@ -95,7 +95,7 @@ body {
 .clock {
     margin: 0;
     font-size: 160px;
-    font-weight: 100;
+    font-weight:400;
 }
 
 .greeting {
@@ -105,12 +105,58 @@ body {
 
 .renameBtn {
     opacity: 0;
-    transition: all 500ms;
+    transition: all 100ms;
+}
+
+.renameForm input {
+    text-align: center;
+    font-size: 46px;
+    height: 46px;
+    width: 46px;
+    background: none;
+    border: 0;
+    border-bottom: 3px solid white;
+}
+
+.renameForm input::placeholder {
+    color : white;
+}
+
+.renameForm input:focus {
+    outline: none;
+}
+
+.toDoBox {
+    margin-top: 20px;
+}
+
+.toDoForm input {
+    text-align: center;
+    font-size: 34px;
+    height: 50px;
+    width: 500px;
+    background: none;
+    border: 0;
+    border-bottom: 3px solid white;
+}
+
+.toDoForm input::placeholder {
+    color : white;
+    opacity: 0.9;
+}
+
+.toDoForm input:focus {
+    outline: none;
 }
 
 .toDoList {
     overflow-y: auto;
     height:200px;
+    width:200px;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    margin-left:100px;
 }
 
 .bgImage {

@@ -60,6 +60,8 @@ function handleRenameBtnClick(event){
     seeRenameForm();
     removeRenameBtn();
     greetingWhileRename();
+    const renameInput = document.querySelector(".js-renameInput");
+    renameInput.value = localStorage.getItem(USER_NAME);
 }
 
 function genRenameForm(){
@@ -79,7 +81,6 @@ function genBtn(){
     const renameBtn = document.createElement("btn");
     renameBtn.innerText = "✂";
     renameBtn.addEventListener("click",handleRenameBtnClick);
-    renameBtn.classList.add("fadein");
     renameBtn.classList.add("js-renameBtn");
     renameBtn.classList.add("renameBtn");
     renameBtn.classList.add("showingAsInline");

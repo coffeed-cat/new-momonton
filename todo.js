@@ -42,7 +42,7 @@ function paintToDo(todo){
     toDoList.appendChild(li);
     const toDoObj = {
         text : todo,
-        id : arrayNum
+        id : arrayNum,
     };
     arrayNum+=1;
     toDoArr.push(toDoObj);
