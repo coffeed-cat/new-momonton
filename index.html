@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>New Momonton</title>
+    <script src="https://kit.fontawesome.com/334f222d43.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +14,7 @@
     </header>
     <main>
         <div class="mainBox">
+            <div class="js-dummyBox dummyBox invisible"></div>
             <div class="js-clockBox clockBox fadein invisible">
                 <h1 class="js-clock clock">00:00</h1>
             </div>
@@ -22,10 +24,10 @@
                 <div class="js-hajimemashite hajimemashite fadein showing">
                     Hi! It's a Good day!<!-- 나타났다가 사라지고 Tell me your name 으로 내용 바꾼후 다시 나타냄-->
                 </div>
-                <div class="js-greetingBox"><!--수정바람-->
+                <div class="js-greetingBox greetingBox">
                     <span class="js-greeting greeting fadein invisible">
-                        <!--시계랑 같이 나타남-->
                     </span>
+                    <span id="hide"></span>
                 </div>
                 <form class="js-nameForm nameForm fadein showing">
                     <input type="text">

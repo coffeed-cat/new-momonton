@@ -1,4 +1,12 @@
 const greetingBox = document.querySelector(".js-greetingBox");
+const hide = document.querySelector("#hide");
+
+
+function resize(){
+    const renameInput = document.querySelector(".js-renameInput");
+    hide.innerText = renameInput.value;
+    renameInput.style.width = hide.offsetWidth + "px";
+}
 
 function greetingWhileRename(){
     const hourForGreet = new Date().getHours();
@@ -62,6 +70,7 @@ function handleRenameBtnClick(event){
     greetingWhileRename();
     const renameInput = document.querySelector(".js-renameInput");
     renameInput.value = localStorage.getItem(USER_NAME);
+    resize();
 }
 
 function genRenameForm(){
@@ -72,14 +81,16 @@ function genRenameForm(){
     renameForm.classList.add("invisible");
     renameForm.classList.add("js-renameForm");
     renameForm.classList.add("renameForm");
+    renameForm.addEventListener("input",resize);
     renameForm.addEventListener("submit",handleSubmitRename);
     renameForm.appendChild(renameInput);
     greetingBox.appendChild(renameForm);
 }
 
 function genBtn(){
-    const renameBtn = document.createElement("btn");
-    renameBtn.innerText = "✂";
+    const renameBtn = document.createElement("i");
+    renameBtn.classList.add("fas");
+    renameBtn.classList.add("fa-pen");
     renameBtn.addEventListener("click",handleRenameBtnClick);
     renameBtn.classList.add("js-renameBtn");
     renameBtn.classList.add("renameBtn");

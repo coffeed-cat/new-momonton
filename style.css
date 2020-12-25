@@ -1,6 +1,6 @@
 * {
     color:white;
-    font-family: "Segoe UI";
+    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
 }
 
@@ -69,6 +69,10 @@ body {
     align-items:center;
 }
 
+.dummyBox {
+    height: 18vh;
+}
+
 .hajimemashite {
     text-align: center;
     font-size: 50px;
@@ -98,9 +102,19 @@ body {
     font-weight:400;
 }
 
+.greetingBox {
+    display: flex;
+    align-items: center;
+}
+
+.greetingBox i {
+    cursor: pointer;
+}
+
 .greeting {
-    padding-left: 16px;
+    padding-left: 26px;
     font-size: 46px;
+    margin-right: 10px;
 }
 
 .renameBtn {
@@ -108,11 +122,19 @@ body {
     transition: all 100ms;
 }
 
+#hide {
+    position : absolute;
+    height : 0;
+    overflow: hidden;
+    white-space: pre;
+    font-size: 46px;
+}
+
 .renameForm input {
     text-align: center;
     font-size: 46px;
     height: 46px;
-    width: 46px;
+    min-width: 10px;
     background: none;
     border: 0;
     border-bottom: 3px solid white;
@@ -152,11 +174,20 @@ body {
 .toDoList {
     overflow-y: auto;
     height:200px;
-    width:200px;
+    width:400px;
     list-style-type: none;
     padding-left: 0;
     text-align: left;
-    margin-left:100px;
+    margin-left:98px;
+    font-size: 30px;
+}
+
+.toDoList li {
+    margin-bottom: 18px;
+}
+
+.toDoList span {
+    margin-left: 30px;
 }
 
 .bgImage {

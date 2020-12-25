@@ -7,6 +7,7 @@ const hajimemashite = document.querySelector(".js-hajimemashite");
 const clockBoxForGreetingJs = document.querySelector(".js-clockBox");
 const clockForGreetingJs = clockBoxForGreetingJs.querySelector(".js-clock");//삭제해도될듯
 const toDoBox = document.querySelector(".js-toDoBox");
+const dummyBox = document.querySelector(".js-dummyBox");
 
 function addHoverOnRenameBtn(){
     greetingBox.addEventListener("mouseover",function(){//////
@@ -17,6 +18,10 @@ function addHoverOnRenameBtn(){
         const renameBtn = document.querySelector(".js-renameBtn");
         renameBtn.style.opacity = 0;
     });
+}
+
+function seeDummyBox(){
+    dummyBox.classList.remove("invisible");
 }
 
 function seeToDoBox(){
@@ -35,6 +40,7 @@ function seeGreeting(){
 
 function seeAfterSubmit(){
     hajimemashite.addEventListener("animationend",function(){
+        seeDummyBox();
         seeClockBox();
         seeGreeting();
         seeToDoBox();
@@ -46,6 +52,7 @@ function seeAfterSubmit(){
 function successLoad(){
     removeForm();
     removeHajimemashite();
+    seeDummyBox();
     seeClockBox();
     seeGreeting();
     seeToDoBox();

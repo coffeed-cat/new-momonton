@@ -31,10 +31,11 @@ function handleSubmitToDo(event){
 
 function paintToDo(todo){
     const li = document.createElement("li");
-    const delBtn = document.createElement("button");
+    const delBtn = document.createElement("i");
     const span = document.createElement("span");
     delBtn.addEventListener("click",deleteToDo);
-    delBtn.innerText = "❌";
+    delBtn.classList.add("far");
+    delBtn.classList.add("fa-times-circle");
     span.innerText = todo;
     li.appendChild(delBtn);
     li.appendChild(span);
