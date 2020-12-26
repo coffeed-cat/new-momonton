@@ -17,6 +17,15 @@ body {
     display:inline;
 }
 
+@keyframes blink {
+    0%{
+        background:rgba(255,255,255,.5)
+    }
+    100%{
+        background:rgba(255,255,255,0)
+    }
+}
+
 @keyframes fadein {
     0% {
         opacity: 0;
@@ -33,6 +42,24 @@ body {
     100% {
         opacity:0;
     }
+}
+
+@keyframes rotatex {
+    0%{
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0);
+    }
+}
+
+.rotatex{
+    animation: rotatex 500ms linear;
+}
+
+.blink {
+    animation : blink 1s
 }
 
 .fadein {
@@ -57,8 +84,9 @@ body {
 
 .weather {
     position: absolute;
-    right:0;
-    top:0;
+    right:13px;
+    top:13px;
+    font-size: 17px;
 }
 
 .mainBox {
@@ -70,7 +98,7 @@ body {
 }
 
 .dummyBox {
-    height: 18vh;
+    height: 20vh;
 }
 
 .hajimemashite {
@@ -100,6 +128,8 @@ body {
     margin: 0;
     font-size: 160px;
     font-weight:400;
+    letter-spacing: -1px;
+    animation: rotatex 500ms linear;
 }
 
 .greetingBox {
@@ -114,7 +144,8 @@ body {
 .greeting {
     padding-left: 26px;
     font-size: 46px;
-    margin-right: 10px;
+    margin-right: 12px;
+    animation: rotatex 500ms linear;
 }
 
 .renameBtn {
@@ -160,6 +191,7 @@ body {
     background: none;
     border: 0;
     border-bottom: 3px solid white;
+    animation: rotatex 500ms linear;
 }
 
 .toDoForm input::placeholder {
@@ -173,7 +205,7 @@ body {
 
 .toDoList {
     overflow-y: auto;
-    height:200px;
+    height:150px;
     width:400px;
     list-style-type: none;
     padding-left: 0;
@@ -183,11 +215,23 @@ body {
 }
 
 .toDoList li {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
+    animation: rotatex 600ms linear;
 }
 
 .toDoList span {
     margin-left: 30px;
+}
+
+.toDoList::-webkit-scrollbar {
+    width:7px;
+    background-color: none;
+}
+
+.toDoList::-webkit-scrollbar-thumb {
+    width:7px;
+    background-color: white;
+    border-radius: 7px;
 }
 
 .bgImage {

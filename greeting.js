@@ -108,11 +108,11 @@ function askForName(){
 function paintGreeting(userName){
     const hourForGreet = new Date().getHours();
     if(hourForGreet > 6 && hourForGreet < 12){
-        greeting.innerText = `Good Moring. ${userName}!`;
+        greeting.innerText = `Good moring, ${userName}!`;
     }else if(hourForGreet >= 12 && hourForGreet < 18){
-        greeting.innerText = `Good Afternoon. ${userName}!`;
+        greeting.innerText = `Good afternoon, ${userName}!`;
     }else{
-        greeting.innerText = `You must be exhausted. ${userName}`;
+        greeting.innerText = `You must be exhausted, ${userName}`;
     }
 }
 

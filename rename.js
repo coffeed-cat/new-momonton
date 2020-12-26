@@ -11,11 +11,11 @@ function resize(){
 function greetingWhileRename(){
     const hourForGreet = new Date().getHours();
     if(hourForGreet > 6 && hourForGreet < 12){
-        greeting.innerText = `Good Moring. `;
+        greeting.innerText = `Good moring, `;
     }else if(hourForGreet >= 12 && hourForGreet < 18){
-        greeting.innerText = `Good Afternoon. `;
+        greeting.innerText = `Good afternoon, `;
     }else{
-        greeting.innerText = `You must be exhausted. `;
+        greeting.innerText = `You must be exhausted, `;
     }    
 }
 
@@ -71,6 +71,10 @@ function handleRenameBtnClick(event){
     const renameInput = document.querySelector(".js-renameInput");
     renameInput.value = localStorage.getItem(USER_NAME);
     resize();
+    renameInput.classList.add("blink");/////
+    renameInput.addEventListener("animationend",function(){/////
+        renameInput.classList.remove("blink");
+    })
 }
 
 function genRenameForm(){
