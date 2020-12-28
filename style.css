@@ -216,7 +216,7 @@ body {
 
 .toDoList li {
     margin-bottom: 15px;
-    animation: rotatex 600ms linear;
+    animation: rotatex 300ms linear;
 }
 
 .toDoList span {
