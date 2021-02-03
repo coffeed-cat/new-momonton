@@ -1,245 +1,248 @@
 * {
-    color:white;
-    font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 200;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
 body {
-    background-color: black;
-    margin:0;
+  background-color: black;
+  margin: 0;
 }
 
-.nameForm, .hajimemashite, .renameBtn{
-    display:none;
+.nameForm,
+.hajimemashite,
+.renameBtn {
+  display: none;
 }
 
 .renameForm {
-    display:inline;
+  display: inline;
 }
 
 @keyframes blink {
-    0%{
-        background:rgba(255,255,255,.5)
-    }
-    100%{
-        background:rgba(255,255,255,0)
-    }
+  0% {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+  }
 }
 
 @keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity : 100;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 
 @keyframes fadeout {
-    0% {
-        opacity: 100;
-    }
-    100% {
-        opacity:0;
-    }
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes rotatex {
-    0%{
-        opacity: 0;
-        transform: rotateX(90deg);
-    }
-    100%{
-        transform: rotateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
 }
 
-.rotatex{
-    animation: rotatex 500ms linear;
+.rotatex {
+  animation: rotatex 500ms linear;
 }
 
 .blink {
-    animation : blink 1s
+  animation: blink 1s;
 }
 
 .fadein {
-    animation : fadein 0.7s;
+  animation: fadein 0.7s;
 }
 
 .fadeout {
-    animation : fadeout 0.9s;
+  animation: fadeout 0.9s;
 }
 
 .invisible {
-    display:none;
+  display: none;
 }
 
 .showing {
-    display:block;
+  display: block;
 }
 
 .showingAsInline {
-    display:inline;
+  display: inline;
 }
 
 .weather {
-    position: absolute;
-    right:13px;
-    top:13px;
-    font-size: 17px;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  font-size: 17px;
 }
 
 .mainBox {
-    display:flex;
-    height:100vh;
-    flex-flow:wrap column;
-    justify-content: center;
-    align-items:center;
+  display: flex;
+  height: 100vh;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: center;
 }
 
 .dummyBox {
-    height: 20vh;
+  height: 20vh;
 }
 
 .hajimemashite {
-    text-align: center;
-    font-size: 50px;
+  text-align: center;
+  font-size: 50px;
 }
 
 .nameForm {
-    text-align: center;
+  text-align: center;
 }
 
 .nameForm input {
-    text-align: center;
-    font-size: 50px;
-    height: 50px;
-    width: 300px;
-    background: none;
-    border: 0;
-    border-bottom: 3px solid white;
+  text-align: center;
+  font-size: 46px;
+  height: 50px;
+  width: 300px;
+  background: none;
+  border: 0;
+  border-bottom: 3px solid white;
 }
 
 .nameForm input:focus {
-    outline: none;
+  outline: none;
 }
 
 .clock {
-    margin: 0;
-    font-size: 160px;
-    font-weight:400;
-    letter-spacing: -1px;
-    animation: rotatex 500ms linear;
+  margin: 0;
+  font-size: 160px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  animation: rotatex 500ms linear;
 }
 
 .greetingBox {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .greetingBox i {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .greeting {
-    padding-left: 26px;
-    font-size: 46px;
-    margin-right: 12px;
-    animation: rotatex 500ms linear;
+  padding-left: 26px;
+  font-size: 46px;
+  margin-right: 12px;
+  animation: rotatex 500ms linear;
 }
 
 .renameBtn {
-    opacity: 0;
-    transition: all 100ms;
+  opacity: 0;
+  transition: all 100ms;
 }
 
 #hide {
-    position : absolute;
-    height : 0;
-    overflow: hidden;
-    white-space: pre;
-    font-size: 46px;
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  white-space: pre;
+  font-size: 46px;
 }
 
 .renameForm input {
-    text-align: center;
-    font-size: 46px;
-    height: 46px;
-    min-width: 10px;
-    background: none;
-    border: 0;
-    border-bottom: 3px solid white;
+  text-align: center;
+  font-size: 46px;
+  height: 46px;
+  min-width: 10px;
+  background: none;
+  border: 0;
+  border-bottom: 3px solid white;
 }
 
 .renameForm input::placeholder {
-    color : white;
+  color: white;
 }
 
 .renameForm input:focus {
-    outline: none;
+  outline: none;
 }
 
 .toDoBox {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .toDoForm input {
-    text-align: center;
-    font-size: 34px;
-    height: 50px;
-    width: 500px;
-    background: none;
-    border: 0;
-    border-bottom: 3px solid white;
-    animation: rotatex 500ms linear;
+  text-align: center;
+  font-size: 34px;
+  height: 50px;
+  width: 500px;
+  background: none;
+  border: 0;
+  border-bottom: 3px solid white;
+  animation: rotatex 500ms linear;
 }
 
 .toDoForm input::placeholder {
-    color : white;
-    opacity: 0.9;
+  color: white;
+  opacity: 0.9;
 }
 
 .toDoForm input:focus {
-    outline: none;
+  outline: none;
 }
 
 .toDoList {
-    overflow-y: auto;
-    height:150px;
-    width:400px;
-    list-style-type: none;
-    padding-left: 0;
-    text-align: left;
-    margin-left:98px;
-    font-size: 30px;
+  overflow-y: auto;
+  height: 150px;
+  width: 400px;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  margin-left: 98px;
+  font-size: 30px;
 }
 
 .toDoList li {
-    margin-bottom: 15px;
-    animation: rotatex 300ms linear;
+  margin-bottom: 15px;
+  animation: rotatex 300ms linear;
 }
 
 .toDoList span {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .toDoList::-webkit-scrollbar {
-    width:7px;
-    background-color: none;
+  width: 7px;
+  background-color: none;
 }
 
 .toDoList::-webkit-scrollbar-thumb {
-    width:7px;
-    background-color: white;
-    border-radius: 7px;
+  width: 7px;
+  background-color: white;
+  border-radius: 7px;
 }
 
 .bgImage {
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
-    animation:fadein 700ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadein 700ms;
 }
