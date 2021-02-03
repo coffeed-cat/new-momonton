@@ -119,12 +119,19 @@ function askForName() {
 function paintGreeting(userName) {
   const hourForGreet = new Date().getHours();
   if (hourForGreet > 6 && hourForGreet < 12) {
-    greeting.innerText = `Good moring, ${userName}!`;
+    greeting.innerText = `Good moring, `;
   } else if (hourForGreet >= 12 && hourForGreet < 18) {
-    greeting.innerText = `Good afternoon, ${userName}!`;
+    greeting.innerText = `Good afternoon, `;
   } else {
-    greeting.innerText = `You must be exhausted, ${userName}`;
+    greeting.innerText = `You must be exhausted, `;
   }
+  const nameExp = document.createElement("span");
+  nameExp.innerText = userName;
+  nameExp.classList.add("js-nameExp");
+  const owari = document.createElement("span");
+  owari.innerText = ".";
+  greeting.appendChild(nameExp);
+  greeting.appendChild(owari);
 }
 
 function loadName() {
