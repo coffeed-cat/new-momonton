@@ -119,7 +119,7 @@ function askForName() {
 function paintGreeting(userName) {
   const hourForGreet = new Date().getHours();
   if (hourForGreet > 6 && hourForGreet < 12) {
-    greeting.innerText = `Good moring, `;
+    greeting.innerText = `Good morning, `;
   } else if (hourForGreet >= 12 && hourForGreet < 18) {
     greeting.innerText = `Good afternoon, `;
   } else {
